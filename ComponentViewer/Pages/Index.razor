@@ -1,0 +1,20 @@
+﻿@page "/"
+
+<MudGrid>
+    <MudItem xs="12" sm="8">
+        <MudPasswordField @bind-Value="TextValue" Label="Outlined" Variant="Variant.Outlined" @bind-PasswordMode="@_passwordMode" Immediate="true" />
+    </MudItem>
+
+    <MudItem xs="12" sm="4">
+        <MudSwitch @bind-Checked="_passwordMode" Label="Password Mode" Color="Color.Primary" />
+    </MudItem>
+</MudGrid>
+
+
+
+
+
+@code {
+    public string TextValue { get; set; }
+    bool _passwordMode = true;
+}
